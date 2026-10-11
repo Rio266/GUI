@@ -1,0 +1,22 @@
+from tkinter import *
+screen = Tk()
+screen.geometry("300x300")
+menu_bar = Menu(screen)
+file = Menu(menu_bar, tearoff = 0)
+menu_bar.add_cascade(label = "File", menu = file)
+file.add_command(label = "New File")
+file.add_command(label = "Open File")
+file.add_command(label = "Save")
+file.add_separator()
+file.add_command(label = "Exit", command = exit)
+
+file = Menu(menu_bar, tearoff = 0)
+menu_bar.add_cascade(label = "Edit", menu = file)
+file.add_command(label = "Undo")
+file.add_command(label = "Redo")
+file.add_separator()
+file.add_command(label = "Copy")
+file.add_command(label = "Paste")
+
+screen.config(menu = menu_bar)
+mainloop()
