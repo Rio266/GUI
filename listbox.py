@@ -1,0 +1,11 @@
+from tkinter import *
+screen = Tk()
+screen.geometry("300x300")
+box = Listbox(screen, bg = "orange", width = 9, height = 6)
+title = Label(screen, text = "Choose a Value")
+box.insert(1, "abc")
+box.insert(2, "ghi")
+box.insert(3, "xyz")
+box.place(x = 0, y = 30)
+title.place(x = 0, y = 12)
+mainloop()
